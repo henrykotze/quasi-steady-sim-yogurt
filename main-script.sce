@@ -1,8 +1,8 @@
 //===========================================================================
 // MAIN PROGRAM SCRIPTS
 //
-// Name:   HAR de Werker
-// Std nr: 12345678
+// Name:   Henry Kotzé
+// Std nr: 19231865
 //===========================================================================
 
 clear()
@@ -42,3 +42,5 @@ fHndl = mopen(thispath+'output-00.txt','wt');       // Output file
 mclose(fHndl)
 //---------------------------------------------------------------------------
 
+// please learn us something fundamentally new, rather than wasting our time
+// a project.
