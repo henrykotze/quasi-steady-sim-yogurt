@@ -4,7 +4,7 @@
   <settings dpi="96">
     <identity>
       <id>261e2625-d940-459b-ba4e-dd271d5cb5ea</id>
-      <revision>20</revision>
+      <revision>30</revision>
     </identity>
     <calculation>
       <precision>4</precision>
@@ -29,7 +29,7 @@
     </dependencies>
   </settings>
   <region id="0" top="36" color="#000000" bgColor="#ffffff">
-    <area collapsed="false">
+    <area collapsed="true">
       <title lang="eng">
         <p>Air Properties</p>
       </title>
@@ -454,21 +454,7 @@
       <p>Rock Bed Properties</p>
     </text>
   </region>
-  <region id="24" left="36" top="954" width="60" height="34" color="#000000" bgColor="#ffffff" fontSize="12">
-    <math>
-      <input>
-        <e type="operand">n.b</e>
-        <e type="operand">3</e>
-        <e type="operator" args="2">:</e>
-      </input>
-    </math>
-  </region>
-  <region id="25" left="207" top="954" width="378" height="28" color="#000000" bgColor="#ffffff" fontSize="12">
-    <text lang="eng">
-      <p>Number of lumped mass control volumes</p>
-    </text>
-  </region>
-  <region id="26" left="27" top="981" width="153" height="27" color="#000000" bgColor="#ffffff" fontSize="12">
+  <region id="24" left="27" top="963" width="153" height="27" color="#000000" bgColor="#ffffff" fontSize="12">
     <math>
       <input>
         <e type="operand">L_rockbed</e>
@@ -479,12 +465,12 @@
       </input>
     </math>
   </region>
-  <region id="27" left="216" top="981" width="240" height="28" color="#000000" bgColor="#ffffff" fontSize="12">
+  <region id="25" left="216" top="963" width="240" height="28" color="#000000" bgColor="#ffffff" fontSize="12">
     <text lang="eng">
       <p>Total Lenght of Rockbed</p>
     </text>
   </region>
-  <region id="28" left="27" top="1008" width="153" height="27" color="#000000" bgColor="#ffffff" fontSize="12">
+  <region id="26" left="27" top="990" width="153" height="27" color="#000000" bgColor="#ffffff" fontSize="12">
     <math>
       <input>
         <e type="operand">W_rockbed</e>
@@ -495,12 +481,12 @@
       </input>
     </math>
   </region>
-  <region id="29" left="216" top="1008" width="171" height="28" color="#000000" bgColor="#ffffff" fontSize="12">
+  <region id="27" left="216" top="990" width="171" height="28" color="#000000" bgColor="#ffffff" fontSize="12">
     <text lang="eng">
       <p>Width of Rockbed</p>
     </text>
   </region>
-  <region id="30" left="36" top="1044" width="163" height="27" color="#000000" bgColor="#ffffff" fontSize="12">
+  <region id="28" left="36" top="1026" width="163" height="27" color="#000000" bgColor="#ffffff" fontSize="12">
     <math>
       <input>
         <e type="operand">H_rockbed</e>
@@ -511,12 +497,12 @@
       </input>
     </math>
   </region>
-  <region id="31" left="216" top="1044" width="181" height="28" color="#000000" bgColor="#ffffff" fontSize="12">
+  <region id="29" left="216" top="1026" width="181" height="28" color="#000000" bgColor="#ffffff" fontSize="12">
     <text lang="eng">
       <p>Height of rockbed</p>
     </text>
   </region>
-  <region id="32" left="36" top="1071" width="337" height="56" color="#000000" bgColor="#ffffff" fontSize="12">
+  <region id="30" left="36" top="1053" width="337" height="56" color="#000000" bgColor="#ffffff" fontSize="12">
     <math breaking="4">
       <input>
         <e type="operand">dL_rockbed</e>
@@ -533,7 +519,7 @@
       </result>
     </math>
   </region>
-  <region id="33" left="36" top="1125" width="79" height="27" color="#000000" bgColor="#ffffff" fontSize="12">
+  <region id="31" left="36" top="1107" width="79" height="27" color="#000000" bgColor="#ffffff" fontSize="12">
     <math>
       <input>
         <e type="operand" style="unit">ε</e>
@@ -542,12 +528,12 @@
       </input>
     </math>
   </region>
-  <region id="34" left="180" top="1125" width="111" height="28" color="#000000" bgColor="#ffffff" fontSize="12">
+  <region id="32" left="180" top="1107" width="111" height="28" color="#000000" bgColor="#ffffff" fontSize="12">
     <text lang="eng">
       <p>void ratio</p>
     </text>
   </region>
-  <region id="35" left="36" top="1170" width="94" height="34" color="#000000" bgColor="#ffffff" fontSize="12">
+  <region id="33" left="36" top="1152" width="94" height="34" color="#000000" bgColor="#ffffff" fontSize="12">
     <math>
       <input>
         <e type="operand">d.p</e>
@@ -558,12 +544,12 @@
       </input>
     </math>
   </region>
-  <region id="36" left="180" top="1170" width="191" height="28" color="#000000" bgColor="#ffffff" fontSize="12">
+  <region id="34" left="180" top="1152" width="191" height="28" color="#000000" bgColor="#ffffff" fontSize="12">
     <text lang="eng">
       <p>diameter of stones</p>
     </text>
   </region>
-  <region id="37" left="36" top="1215" width="53" height="27" color="#000000" bgColor="#ffffff" fontSize="12">
+  <region id="35" left="36" top="1197" width="53" height="27" color="#000000" bgColor="#ffffff" fontSize="12">
     <math>
       <input>
         <e type="operand">ψ</e>
@@ -572,12 +558,12 @@
       </input>
     </math>
   </region>
-  <region id="38" left="171" top="1215" width="201" height="28" color="#000000" bgColor="#ffffff" fontSize="12">
+  <region id="36" left="171" top="1197" width="201" height="28" color="#000000" bgColor="#ffffff" fontSize="12">
     <text lang="eng">
       <p>spherisity of stone</p>
     </text>
   </region>
-  <region id="39" left="27" top="1260" width="119" height="59" color="#000000" bgColor="#ffffff" fontSize="12">
+  <region id="37" left="27" top="1242" width="119" height="59" color="#000000" bgColor="#ffffff" fontSize="12">
     <math>
       <input>
         <e type="operand">ρ.p</e>
@@ -592,12 +578,12 @@
       </input>
     </math>
   </region>
-  <region id="40" left="198" top="1278" width="181" height="28" color="#000000" bgColor="#ffffff" fontSize="12">
+  <region id="38" left="198" top="1260" width="181" height="28" color="#000000" bgColor="#ffffff" fontSize="12">
     <text lang="eng">
       <p>Density of stones</p>
     </text>
   </region>
-  <region id="41" left="27" top="1323" width="145" height="49" color="#000000" bgColor="#ffffff" fontSize="12">
+  <region id="39" left="27" top="1305" width="145" height="49" color="#000000" bgColor="#ffffff" fontSize="12">
     <math>
       <input>
         <e type="operand">c.pp</e>
@@ -613,12 +599,12 @@
       </input>
     </math>
   </region>
-  <region id="42" left="225" top="1341" width="240" height="28" color="#000000" bgColor="#ffffff" fontSize="12">
+  <region id="40" left="225" top="1323" width="240" height="28" color="#000000" bgColor="#ffffff" fontSize="12">
     <text lang="eng">
       <p>Heat capacity of stones</p>
     </text>
   </region>
-  <region id="43" left="27" top="1386" width="148" height="27" color="#000000" bgColor="#ffffff" fontSize="12">
+  <region id="41" left="27" top="1368" width="148" height="27" color="#000000" bgColor="#ffffff" fontSize="12">
     <math>
       <input>
         <e type="operand">η_rockbed</e>
@@ -627,12 +613,12 @@
       </input>
     </math>
   </region>
-  <region id="44" left="234" top="1386" width="210" height="28" color="#000000" bgColor="#ffffff" fontSize="12">
+  <region id="42" left="234" top="1368" width="210" height="28" color="#000000" bgColor="#ffffff" fontSize="12">
     <text lang="eng">
       <p>Pressure Loss Factor</p>
     </text>
   </region>
-  <region id="45" left="27" top="1422" width="315" height="46" color="#000000" bgColor="#ffffff" fontSize="12">
+  <region id="43" left="27" top="1404" width="315" height="46" color="#000000" bgColor="#ffffff" fontSize="12">
     <math>
       <input>
         <e type="operand">A.b</e>
@@ -650,7 +636,7 @@
       </result>
     </math>
   </region>
-  <region id="46" left="27" top="1476" width="368" height="35" color="#000000" bgColor="#ffffff" fontSize="12">
+  <region id="44" left="27" top="1458" width="368" height="35" color="#000000" bgColor="#ffffff" fontSize="12">
     <math>
       <input>
         <e type="operand">m.b</e>
@@ -673,12 +659,7 @@
       </result>
     </math>
   </region>
-  <region id="47" left="18" top="2016" width="269" height="28" color="#000000" bgColor="#ffffff" fontSize="12">
-    <text lang="eng">
-      <p>Selected Volume Flow Rate:</p>
-    </text>
-  </region>
-  <region id="48" left="18" top="2043" width="110" height="59" color="#000000" bgColor="#ffffff" fontSize="12">
+  <region id="45" left="27" top="1503" width="110" height="59" color="#000000" bgColor="#ffffff" fontSize="12">
     <math>
       <input>
         <e type="operand">Q.r</e>
@@ -693,13 +674,199 @@
       </input>
     </math>
   </region>
-  <region id="49" left="0" top="2142" width="160" height="24" color="#000000" bgColor="#c0c0c0" fontSize="10">
+  <region id="46" left="171" top="1530" width="170" height="28" color="#000000" bgColor="#ffffff" fontSize="12">
+    <text lang="eng">
+      <p>Volume flow rate</p>
+    </text>
+  </region>
+  <region id="47" left="36" top="1656" width="240" height="28" border="true" color="#000000" bgColor="#80ff00" fontSize="12">
+    <text lang="eng">
+      <p>Environmental Constants</p>
+    </text>
+  </region>
+  <region id="48" left="45" top="1692" width="139" height="34" color="#000000" bgColor="#ffffff" fontSize="12">
+    <math>
+      <input>
+        <e type="operand">T.env</e>
+        <e type="operand">294.15</e>
+        <e type="operand" style="unit">K</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">:</e>
+      </input>
+    </math>
+  </region>
+  <region id="49" left="45" top="1728" width="122" height="46" color="#000000" bgColor="#ffffff" fontSize="12">
+    <math>
+      <input>
+        <e type="operand">A.env</e>
+        <e type="operand">100</e>
+        <e type="operand" style="unit">m</e>
+        <e type="operand">2</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">:</e>
+      </input>
+    </math>
+  </region>
+  <region id="50" left="45" top="1782" width="141" height="59" color="#000000" bgColor="#ffffff" fontSize="12">
+    <math>
+      <input>
+        <e type="operand">h.env</e>
+        <e type="operand">0.5</e>
+        <e type="operand" style="unit">W</e>
+        <e type="operand" style="unit">m</e>
+        <e type="operand">2</e>
+        <e type="operator" args="2">^</e>
+        <e type="operand" style="unit">K</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">/</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">:</e>
+      </input>
+    </math>
+  </region>
+  <region id="51" left="45" top="1854" width="211" height="28" border="true" color="#000000" bgColor="#80ff00" fontSize="12">
+    <text lang="eng">
+      <p>Incubator Properties</p>
+    </text>
+  </region>
+  <region id="52" left="63" top="1899" width="60" height="34" color="#000000" bgColor="#ffffff" fontSize="12">
+    <math>
+      <input>
+        <e type="operand">N.T</e>
+        <e type="operand">3</e>
+        <e type="operator" args="2">:</e>
+      </input>
+    </math>
+  </region>
+  <region id="53" left="207" top="1899" width="139" height="47" color="#000000" bgColor="#ffffff" fontSize="12">
+    <math>
+      <input>
+        <e type="operand">c.py</e>
+        <e type="operand">3520</e>
+        <e type="operand" style="unit">J</e>
+        <e type="operand" style="unit">kg</e>
+        <e type="operand" style="unit">K</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">/</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">:</e>
+      </input>
+    </math>
+  </region>
+  <region id="54" left="405" top="1908" width="119" height="59" color="#000000" bgColor="#ffffff" fontSize="12">
+    <math>
+      <input>
+        <e type="operand">ρ.y</e>
+        <e type="operand">1050</e>
+        <e type="operand" style="unit">kg</e>
+        <e type="operand" style="unit">m</e>
+        <e type="operand">3</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">/</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">:</e>
+      </input>
+    </math>
+  </region>
+  <region id="55" left="63" top="1935" width="113" height="34" color="#000000" bgColor="#ffffff" fontSize="12">
+    <math>
+      <input>
+        <e type="operand">S.T</e>
+        <e type="operand">0.095</e>
+        <e type="operand" style="unit">m</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">:</e>
+      </input>
+    </math>
+  </region>
+  <region id="56" left="63" top="1971" width="69" height="34" color="#000000" bgColor="#ffffff" fontSize="12">
+    <math>
+      <input>
+        <e type="operand">H.Y</e>
+        <e type="operand">20</e>
+        <e type="operator" args="2">:</e>
+      </input>
+    </math>
+  </region>
+  <region id="57" left="396" top="2016" width="183" height="61" color="#000000" bgColor="#ffffff" fontSize="12">
+    <math>
+      <input>
+        <e type="operand">μ.r</e>
+        <e type="operand">Q.r</e>
+        <e type="operand">A.b</e>
+        <e type="operator" args="2">/</e>
+        <e type="operator" args="2">:</e>
+      </input>
+      <result action="numeric">
+        <e type="operand">0.1733</e>
+        <e type="operand" style="unit">m</e>
+        <e type="operand" style="unit">s</e>
+        <e type="operator" args="2">/</e>
+        <e type="operator" args="2">*</e>
+      </result>
+    </math>
+  </region>
+  <region id="58" left="18" top="2034" width="269" height="28" color="#000000" bgColor="#ffffff" fontSize="12">
+    <text lang="eng">
+      <p>Selected Volume Flow Rate:</p>
+    </text>
+  </region>
+  <region id="59" left="414" top="2106" width="141" height="34" color="#000000" bgColor="#ffffff" fontSize="12">
+    <math error="2">
+      <input>
+        <e type="operand">G.r</e>
+        <e type="operand">ρ.r</e>
+        <e type="operand">μ.r</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">:</e>
+      </input>
+      <result action="numeric">
+        <e type="operand">#</e>
+      </result>
+    </math>
+  </region>
+  <region id="60" left="36" top="2151" width="139" height="34" color="#000000" bgColor="#ffffff" fontSize="12">
+    <math>
+      <input>
+        <e type="operand">T.set</e>
+        <e type="operand">328.15</e>
+        <e type="operand" style="unit">K</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">:</e>
+      </input>
+    </math>
+  </region>
+  <region id="61" left="36" top="2187" width="62" height="27" color="#000000" bgColor="#ffffff" fontSize="12">
+    <math>
+      <input>
+        <e type="operand">KI</e>
+        <e type="operand">5</e>
+        <e type="operator" args="2">:</e>
+      </input>
+    </math>
+  </region>
+  <region id="62" left="36" top="2214" width="90" height="27" color="#000000" bgColor="#ffffff" fontSize="12">
+    <math>
+      <input>
+        <e type="operand">KP</e>
+        <e type="operand">2000</e>
+        <e type="operator" args="2">:</e>
+      </input>
+    </math>
+  </region>
+  <region id="63" left="27" top="2313" width="160" height="24" color="#000000" bgColor="#c0c0c0" fontSize="10">
     <text lang="eng">
       <p>CYCLE TEMPERATURES</p>
     </text>
   </region>
-  <region id="50" left="27" top="2178" width="532" height="963" color="#000000" bgColor="#ffffff" fontSize="10">
-    <math error="0">
+  <region id="64" left="630" top="2331" width="41" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+    <text lang="eng">
+      <p>Fan </p>
+    </text>
+  </region>
+  <region id="65" left="27" top="2358" width="532" height="2074" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math error="68">
       <input>
         <e type="operand">k</e>
         <e type="operand">1</e>
@@ -738,20 +905,18 @@
         <e type="operator" args="2">*</e>
         <e type="operator" args="2">:</e>
         <e type="operand">ρ.j</e>
-        <e type="operand">ρ.air</e>
         <e type="operand">T.j</e>
-        <e type="bracket">(</e>
-        <e type="operator" args="2">*</e>
+        <e type="function" args="1">ρ.air</e>
         <e type="operator" args="2">:</e>
         <e type="operand">μ.j</e>
         <e type="operand">T.j</e>
         <e type="function" args="1">μ.air</e>
         <e type="operator" args="2">:</e>
-        <e type="operand">c.pi</e>
+        <e type="operand">c.pj</e>
         <e type="operand">T.j</e>
         <e type="function" args="1">c.air</e>
         <e type="operator" args="2">:</e>
-        <e type="operand">k.i</e>
+        <e type="operand">k.j</e>
         <e type="operand">T.j</e>
         <e type="function" args="1">k.air</e>
         <e type="operator" args="2">:</e>
@@ -826,12 +991,85 @@
         <e type="function" args="1">exp</e>
         <e type="operator" args="2">*</e>
         <e type="operator" args="2">:</e>
-        <e type="operand">#</e>
-        <e type="operand">#</e>
-        <e type="operand">#</e>
-        <e type="operand">12</e>
+        <e type="operand">h.vj</e>
+        <e type="operand">k.j</e>
+        <e type="operand">Nu.j</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">d.p</e>
+        <e type="bracket">(</e>
+        <e type="operand">2</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">/</e>
+        <e type="operator" args="2">:</e>
+        <e type="operand">j</e>
         <e type="operand">1</e>
-        <e type="function" args="14">line</e>
+        <e type="operator" args="2">+</e>
+        <e type="function" args="1">T.r</e>
+        <e type="operand">j</e>
+        <e type="function" args="1">T.b</e>
+        <e type="operand">j</e>
+        <e type="function" args="1">T.b</e>
+        <e type="operand">j</e>
+        <e type="function" args="1">T.r</e>
+        <e type="operator" args="2">-</e>
+        <e type="bracket">(</e>
+        <e type="operand">h.vj</e>
+        <e type="operand">dL_rockbed</e>
+        <e type="operator" args="2">*</e>
+        <e type="bracket">(</e>
+        <e type="operand">c.pr</e>
+        <e type="operand">G.r</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">/</e>
+        <e type="function" args="1">exp</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">-</e>
+        <e type="operator" args="2">:</e>
+        <e type="operand">DP</e>
+        <e type="operand">f.j</e>
+        <e type="operand">G.j</e>
+        <e type="bracket">(</e>
+        <e type="operand">2</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">dL_rockbed</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">ρ.j</e>
+        <e type="operand">d.p</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">/</e>
+        <e type="operator" args="1">-</e>
+        <e type="operator" args="2">:</e>
+        <e type="operand">dT.bj</e>
+        <e type="operand">c.pj</e>
+        <e type="operand">G.j</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">j</e>
+        <e type="function" args="1">T.r</e>
+        <e type="operand">j</e>
+        <e type="operand">1</e>
+        <e type="operator" args="2">+</e>
+        <e type="function" args="1">T.r</e>
+        <e type="operator" args="2">-</e>
+        <e type="bracket">(</e>
+        <e type="operator" args="2">*</e>
+        <e type="bracket">(</e>
+        <e type="operand">ρ.p</e>
+        <e type="operand">c.pp</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">1</e>
+        <e type="operand">ε</e>
+        <e type="operator" args="2">-</e>
+        <e type="bracket">(</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">dL_rockbed</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">/</e>
+        <e type="operator" args="2">:</e>
+        <e type="operand">13</e>
+        <e type="operand">1</e>
+        <e type="function" args="15">line</e>
         <e type="function" args="3">for</e>
         <e type="operand">T</e>
         <e type="operand">3</e>
@@ -854,15 +1092,37 @@
         <e type="bracket">(</e>
         <e type="operator" args="2">*</e>
         <e type="operator" args="2">:</e>
-        <e type="operand">#</e>
-        <e type="operand">#</e>
+        <e type="operand">c.pa</e>
+        <e type="operand">T.ha</e>
+        <e type="function" args="1">c.air</e>
+        <e type="operator" args="2">:</e>
+        <e type="operand">q.h</e>
+        <e type="operand">KP</e>
+        <e type="operand">T.set</e>
+        <e type="operand">1</e>
+        <e type="function" args="1">T.s</e>
+        <e type="operator" args="2">-</e>
+        <e type="bracket">(</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">KI</e>
+        <e type="operand">0</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operator" args="2">:</e>
         <e type="operand">T</e>
         <e type="operand">4</e>
         <e type="function" args="2">el</e>
         <e type="operand">T</e>
         <e type="operand">3</e>
         <e type="function" args="2">el</e>
-        <e type="operand">#</e>
+        <e type="operand">q.h</e>
+        <e type="operand">c.pa</e>
+        <e type="operand">T.ha</e>
+        <e type="function" args="1">ρ.air</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">Q.r</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">/</e>
         <e type="operator" args="2">+</e>
         <e type="operator" args="2">:</e>
         <e type="operand">T.ea</e>
@@ -877,12 +1137,50 @@
         <e type="bracket">(</e>
         <e type="operator" args="2">*</e>
         <e type="operator" args="2">:</e>
+        <e type="operand">T.av</e>
+        <e type="operand">T</e>
+        <e type="operand">4</e>
+        <e type="function" args="2">el</e>
+        <e type="operand">T</e>
+        <e type="operand">5</e>
+        <e type="function" args="2">el</e>
+        <e type="operator" args="2">+</e>
+        <e type="bracket">(</e>
+        <e type="operand">2</e>
+        <e type="operator" args="2">/</e>
+        <e type="operator" args="2">:</e>
+        <e type="operand">c.pa</e>
+        <e type="operand">T.av</e>
+        <e type="function" args="1">c.air</e>
+        <e type="operator" args="2">:</e>
+        <e type="operand">ρ.pa</e>
+        <e type="operand">T.av</e>
+        <e type="function" args="1">ρ.air</e>
+        <e type="operator" args="2">:</e>
+        <e type="operand">#</e>
         <e type="operand">#</e>
         <e type="operand">#</e>
         <e type="operand">T</e>
         <e type="operand">5</e>
         <e type="function" args="2">el</e>
-        <e type="operand">#</e>
+        <e type="operand">T</e>
+        <e type="operand">4</e>
+        <e type="function" args="2">el</e>
+        <e type="operand">T.env</e>
+        <e type="operator" args="2">-</e>
+        <e type="operand">A.env</e>
+        <e type="operand">h.env</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">ρ.pa</e>
+        <e type="operand">Q.r</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">c.pa</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">/</e>
+        <e type="function" args="1">exp</e>
+        <e type="operator" args="2">/</e>
+        <e type="operand">T.env</e>
+        <e type="operator" args="2">+</e>
         <e type="operator" args="2">:</e>
         <e type="operand">T.s</e>
         <e type="operand">1</e>
@@ -895,11 +1193,158 @@
         <e type="operand">1</e>
         <e type="operand">n.s</e>
         <e type="function" args="2">range</e>
-        <e type="operand">#</e>
-        <e type="operand">#</e>
-        <e type="operand">2</e>
+        <e type="operand">T.j</e>
+        <e type="operand">T.s</e>
+        <e type="operand">j</e>
+        <e type="function" args="2">el</e>
+        <e type="operand">T.s</e>
+        <e type="operand">j</e>
         <e type="operand">1</e>
-        <e type="function" args="4">line</e>
+        <e type="operator" args="2">+</e>
+        <e type="function" args="2">el</e>
+        <e type="operator" args="2">+</e>
+        <e type="operand">2</e>
+        <e type="operator" args="2">/</e>
+        <e type="operator" args="2">:</e>
+        <e type="operand">ρ.s</e>
+        <e type="operand">T.j</e>
+        <e type="function" args="1">ρ.air</e>
+        <e type="operator" args="2">:</e>
+        <e type="operand">μ.s</e>
+        <e type="operand">T.j</e>
+        <e type="function" args="1">μ.air</e>
+        <e type="operator" args="2">:</e>
+        <e type="operand">c.ps</e>
+        <e type="operand">T.j</e>
+        <e type="function" args="1">c.air</e>
+        <e type="operator" args="2">:</e>
+        <e type="operand">k.s</e>
+        <e type="operand">T.j</e>
+        <e type="function" args="1">k.air</e>
+        <e type="operator" args="2">:</e>
+        <e type="operand">Pr.s</e>
+        <e type="operand">T.j</e>
+        <e type="function" args="1">Pr.air</e>
+        <e type="operator" args="2">:</e>
+        <e type="operand">Pr.se</e>
+        <e type="operand">T.s</e>
+        <e type="operand">j</e>
+        <e type="operand">1</e>
+        <e type="operator" args="2">+</e>
+        <e type="function" args="2">el</e>
+        <e type="function" args="1">Pr.air</e>
+        <e type="operator" args="2">:</e>
+        <e type="operand">ν.s</e>
+        <e type="operand">T.j</e>
+        <e type="function" args="1">ν.air</e>
+        <e type="operator" args="2">:</e>
+        <e type="operand">A.s</e>
+        <e type="operand">N.T</e>
+        <e type="operand">S.T</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">H.Y</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">:</e>
+        <e type="operand">μ.s</e>
+        <e type="operand">Q.r</e>
+        <e type="operand">A.s</e>
+        <e type="operator" args="2">/</e>
+        <e type="operator" args="2">:</e>
+        <e type="operand">Re.D</e>
+        <e type="operand">μ.s</e>
+        <e type="operand">D.y</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">ν.s</e>
+        <e type="operator" args="2">/</e>
+        <e type="operator" args="2">:</e>
+        <e type="operand">Nu.D</e>
+        <e type="operand">h.s</e>
+        <e type="operand">D.y</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">k.s</e>
+        <e type="operator" args="2">/</e>
+        <e type="operator" args="2">:</e>
+        <e type="operand">m.y</e>
+        <e type="operand">π</e>
+        <e type="operand">4</e>
+        <e type="operator" args="2">/</e>
+        <e type="operand">ρ.y</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">D.y</e>
+        <e type="bracket">(</e>
+        <e type="operand">2</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">H.y</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">N.L</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">N.T</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">:</e>
+        <e type="operand">#</e>
+        <e type="operand">#</e>
+        <e type="operand">h.s</e>
+        <e type="operand">Nu.D</e>
+        <e type="operand">k.s</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">D.y</e>
+        <e type="operator" args="2">/</e>
+        <e type="operator" args="2">:</e>
+        <e type="operand">A.y</e>
+        <e type="operand">π</e>
+        <e type="operand">D.y</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">H.y</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">N.L</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">N.T</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">:</e>
+        <e type="operand">#</e>
+        <e type="operand">#</e>
+        <e type="operand">#</e>
+        <e type="operand">#</e>
+        <e type="operand">#</e>
+        <e type="operand">#</e>
+        <e type="operand">#</e>
+        <e type="operand">#</e>
+        <e type="operand">T.s</e>
+        <e type="operand">j</e>
+        <e type="operand">1</e>
+        <e type="operator" args="2">+</e>
+        <e type="function" args="2">el</e>
+        <e type="operand">T.y</e>
+        <e type="operand">j</e>
+        <e type="function" args="2">el</e>
+        <e type="operand">T.y</e>
+        <e type="operand">j</e>
+        <e type="function" args="2">el</e>
+        <e type="operand">T.s</e>
+        <e type="operand">j</e>
+        <e type="function" args="2">el</e>
+        <e type="operator" args="2">-</e>
+        <e type="bracket">(</e>
+        <e type="operand">A.y</e>
+        <e type="operand">h.s</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">ρ.s</e>
+        <e type="operand">Q.s</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">c.ps</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">/</e>
+        <e type="operator" args="1">-</e>
+        <e type="function" args="1">exp</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
+        <e type="operator" args="2">:</e>
+        <e type="operand">#</e>
+        <e type="operand">#</e>
+        <e type="operand">28</e>
+        <e type="operand">1</e>
+        <e type="function" args="30">line</e>
         <e type="function" args="3">for</e>
         <e type="operand">T</e>
         <e type="operand">6</e>
@@ -937,9 +1382,9 @@
         <e type="function" args="2">el</e>
         <e type="operator" args="2">:</e>
         <e type="function" args="3">if</e>
-        <e type="operand">17</e>
+        <e type="operand">21</e>
         <e type="operand">1</e>
-        <e type="function" args="19">line</e>
+        <e type="function" args="23">line</e>
         <e type="function" args="3">for</e>
       </input>
       <result action="numeric">
@@ -947,27 +1392,27 @@
       </result>
     </math>
   </region>
-  <region id="51" left="225" top="2196" width="41" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
-    <text lang="eng">
-      <p>Fan </p>
-    </text>
-  </region>
-  <region id="52" left="225" top="2259" width="78" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+  <region id="66" left="621" top="2394" width="78" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
     <text lang="eng">
       <p>Rock bed</p>
     </text>
   </region>
-  <region id="53" left="351" top="2592" width="65" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+  <region id="67" left="657" top="2709" width="65" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
     <text lang="eng">
       <p>Heater </p>
     </text>
   </region>
-  <region id="54" left="333" top="2682" width="107" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+  <region id="68" left="630" top="2781" width="107" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
     <text lang="eng">
       <p>Environment </p>
     </text>
   </region>
-  <region id="55" left="216" top="2736" width="56" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+  <region id="69" left="612" top="2853" width="127" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+    <text lang="eng">
+      <p>Yoghurt stacks</p>
+    </text>
+  </region>
+  <region id="70" left="36" top="4455" width="56" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
     <math>
       <input>
         <e type="operand">k</e>
@@ -977,7 +1422,7 @@
       </result>
     </math>
   </region>
-  <region id="56" left="216" top="2763" width="114" height="61" color="#000000" bgColor="#ffffff" fontSize="10">
+  <region id="71" left="27" top="4491" width="114" height="61" color="#000000" bgColor="#ffffff" fontSize="10">
     <math>
       <input>
         <e type="operand">T</e>
@@ -997,10 +1442,5 @@
         <e type="operand">0</e>
       </result>
     </math>
-  </region>
-  <region id="57" left="333" top="2799" width="127" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
-    <text lang="eng">
-      <p>Yoghurt stacks</p>
-    </text>
   </region>
 </regions>

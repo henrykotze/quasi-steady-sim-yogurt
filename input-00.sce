@@ -25,8 +25,7 @@ function [Dat] = InputDataSet()
     Dat.eps_b   =     0.45;  // [ ]         Void ratio 
     Dat.n_b     =     3;     // [ ]         Number of lumped mass control volumes
 
-    Dat.T_b0    =   326.15;  // [K]         Initial bed temperature at t=0   
-
+    Dat.T_b0    =   326.15;  // [K]         Initial bed temperature at t=0  
     Dat.d_p     =     0.100; // [m]         Diameter of stones 
     Dat.psi     =     1.00;  // []          Spherisity
     Dat.rho_p   =  2640.0;   // [kg/m^3]    Density of stones
