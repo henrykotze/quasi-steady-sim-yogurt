@@ -1,6 +1,6 @@
 DPpol = [1055.2  73.946  -13.649]; //  DP = p0 + p1*Q + p2*Q^2
 
-    Qmin_ref=       2.6; // [m^3/s]     Fan minimum reference flow rate
+    Qmin_ref=       2.6 // [m^3/s]     Fan minimum reference flow rate
     Qmax_ref=      11.0; // [m^3/s]     Fan maximum reference flow rate
     rho_ref =       1.2; // [kg/m^3]    Fan reference air density
     rpm_ref =     900.0; // [rpm]       Fan reference speed

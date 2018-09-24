@@ -13,7 +13,7 @@ exec(thispath+'input_vars.sce', -1)      // Input data (Will change)
 
 
 // Initial Values
-T = [ T_0 T_0 T_0 T_0 T_0 T_0];
+T = [308.16176   308.16176   316.15001   320.61251   320.2396   308.16176];
 
 // Air Temperatures through Rock Bed
 Tr = [T_b0-15 T_b0-10 T_b0-8 T_b0-4];
@@ -22,10 +22,10 @@ Tr = [T_b0-15 T_b0-10 T_b0-8 T_b0-4];
 Ts = [T_y0 T_y0-5 T_y0-7 T_y0-10];
 
 //Yogurt stacks averages temperatures
-Ty = [T_y0+2 T_y0+5 T_y0+8];
+Ty = [293.15+10 293.15+12 293.15+15];
 
 // rockbed average temperature
-Tb = [T_b0 T_b0-5 T_b0-10];
+Tb = [326.15 326.15-5 326.15-10];
 
 // Pressure drop across Rockbed
 Pd = 0;
@@ -34,14 +34,17 @@ Pd = 0;
 Py = 0;
 
 // number of iteration
-num_iteration = 10
+num_iteration = 50
 
 // Volume flow rate;
-Qr =5;
+Qr = 3.1734; // 2.647
+rpm_set = 900   
+Qr_ = Qr/n_fan
+Q_star = Qr_*rpm_ref/rpm_set
 Ab = W_b*H_b;
 
-
-
+pressure_pump = -13.649*Q_star^2+73.946*Q_star+1055.2
+pressure_drop = 0;
 for k=1:num_iteration
     // FAN
     T(2) = T(1);                // no temperature change accross fan
@@ -56,13 +59,15 @@ for k=1:num_iteration
         k_avg = k_air( T_avg );                             // thermal conductivity of air
         G_avg = rho_avg*(Qr/Ab);                            // mass flow rate per unit area
         Re_avg = G_avg*d_p/(mu_avg);                        // Reynolds Num
-        f_avg = 4.466*((Re_avg)^0.75)*((psi)^0.696)*((eps_b)^-2.945)*exp( 11.85*( log(psi) )^2 ); // friction factor
+        f_avg = 4.466*((Re_avg)^0.2)*((psi)^0.696)*((eps_b)^-2.945)*exp( 11.85*( log(psi) )^2 ); // friction factor
         Nu_avg = 0.437*((Re_avg)^0.75)*((psi)^3.35)*((eps_b)^-1.620)*exp( 29.03*( log(psi) )^2 ); // Nusselt Number
         h_avg = (k_avg*Nu_avg)/(d_p^2);                     // Convection coefficient 
         Tr(j+1) = Tb(j) - ( Tb(j)-Tr(j) )*exp( (-h_avg*( L_b/n_b ) )/( cp_avg*G_avg ) );
         
         // Pressure drop across control volume
-        Pd = -f_avg*G_avg*(L_b/n_b)/(rho_avg*d_p) + Pd;
+        
+        Pd = -f_avg*G_avg^2*(L_b/n_b)/(rho_avg*d_p) + Pd;
+        disp(Pd)
 
     end
     Pd = eta_r*Pd                                   // Pressure loss accross rock bed
@@ -107,29 +112,27 @@ for k=1:num_iteration
         h_avg = Nu_d*k_avg/(D_y);
         A_y = %pi*D_y*N_Ls*N_Ts;
         
-        Ts(i+1) = Ty(i) + (Ty(i) - Ts(i))*exp( -1*(A_y*h_avg)/(rho_avg*Qr*cp_avg) );
+        Ts(i+1) = Ty(i) - (Ty(i) - Ts(i))*exp( -1*(A_y*h_avg)/(rho_avg*Qr*cp_avg) );
         
         // Pressure drop 
         // Fix friction factor
-        Py = Py + -N_Ls*0.3*rho_avg*mu_s^2/2;
+        Py = Py + -N_Ls*0.3*(rho_avg*mu_s^2)/2;
     end
     Py = eta_s*Py;
     T(6) = Ts(n_s+1);
-    T(1) = T(6);                // closed system 
+    if abs( (T(1)-T(6))/(T(6))) < 1e-8  then
+        k =num_iteration;
+    else
+        T(1) = T(6);                // closed system
+    end
+    
+    pressure_drop = Py+Pd; 
 end
-disp('T6');
-disp(T(6));
-disp('T1');
-disp(T(1));
-
 disp('T')
 disp(T);
-disp('Ts')
-disp(Ts);
-disp('Tr')
-disp(Tr);
-disp('Ty')
-disp(Ty)
-disp('Tb')
-disp(Tb)
-plot(T)
+disp('Pressure pump')
+disp(pressure_pump)
+disp('pressure drop')
+disp(pressure_drop)
+disp('Pressure pump - pressure drop')
+disp(pressure_pump + pressure_drop)

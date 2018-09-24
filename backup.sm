@@ -4,7 +4,7 @@
   <settings dpi="96">
     <identity>
       <id>261e2625-d940-459b-ba4e-dd271d5cb5ea</id>
-      <revision>102</revision>
+      <revision>134</revision>
     </identity>
     <calculation>
       <precision>4</precision>
@@ -287,7 +287,7 @@
       <p>Rock bed control volumes</p>
     </text>
   </region>
-  <region id="14" left="27" top="738" width="167" height="65" color="#000000" bgColor="#ffffff" fontSize="10">
+  <region id="14" left="27" top="738" width="191" height="66" color="#000000" bgColor="#ffffff" fontSize="10">
     <math>
       <input>
         <e type="operand">i</e>
@@ -300,9 +300,14 @@
         <e type="operand">T.r</e>
         <e type="operand">i</e>
         <e type="function" args="2">el</e>
-        <e type="operand">T</e>
-        <e type="operand">2</e>
-        <e type="function" args="2">el</e>
+        <e type="operand">326.15</e>
+        <e type="operand">5</e>
+        <e type="operand">3</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">-</e>
+        <e type="bracket">(</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">-</e>
         <e type="operator" args="2">:</e>
         <e type="function" args="3">for</e>
       </input>
@@ -340,9 +345,11 @@
         <e type="operand">T.s</e>
         <e type="operand">i</e>
         <e type="function" args="2">el</e>
-        <e type="operand">T</e>
+        <e type="operand">293.15</e>
         <e type="operand">5</e>
-        <e type="function" args="2">el</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">-</e>
         <e type="operator" args="2">:</e>
         <e type="function" args="3">for</e>
       </input>
@@ -353,63 +360,134 @@
       <p>Yogurt stack air temps</p>
     </text>
   </region>
-  <region id="20" left="27" top="927" width="167" height="65" color="#000000" bgColor="#ffffff" fontSize="10">
+  <region id="20" left="27" top="927" width="159" height="65" color="#000000" bgColor="#ffffff" fontSize="10">
     <math>
       <input>
         <e type="operand">i</e>
         <e type="operand">1</e>
         <e type="operand">n.s</e>
-        <e type="operand">1</e>
-        <e type="operator" args="2">+</e>
         <e type="bracket">(</e>
         <e type="function" args="2">range</e>
         <e type="operand">T.y</e>
         <e type="operand">i</e>
         <e type="function" args="2">el</e>
-        <e type="operand">T</e>
-        <e type="operand">5</e>
-        <e type="function" args="2">el</e>
+        <e type="operand">293.15</e>
+        <e type="operand">2</e>
+        <e type="operand">i</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">+</e>
         <e type="operator" args="2">:</e>
         <e type="function" args="3">for</e>
       </input>
     </math>
   </region>
-  <region id="21" left="243" top="927" width="167" height="65" color="#000000" bgColor="#ffffff" fontSize="10">
+  <region id="21" left="243" top="927" width="157" height="65" color="#000000" bgColor="#ffffff" fontSize="10">
     <math>
       <input>
         <e type="operand">i</e>
         <e type="operand">1</e>
         <e type="operand">n.s</e>
-        <e type="operand">1</e>
-        <e type="operator" args="2">+</e>
         <e type="bracket">(</e>
         <e type="function" args="2">range</e>
         <e type="operand">T.b</e>
         <e type="operand">i</e>
         <e type="function" args="2">el</e>
-        <e type="operand">T</e>
+        <e type="operand">326.15</e>
+        <e type="operand">i</e>
         <e type="operand">5</e>
-        <e type="function" args="2">el</e>
+        <e type="operator" args="2">*</e>
+        <e type="operator" args="2">-</e>
         <e type="operator" args="2">:</e>
         <e type="function" args="3">for</e>
       </input>
     </math>
   </region>
-  <region id="22" left="432" top="981" width="111" height="27" color="#000000" bgColor="#ffffff" fontSize="12">
-    <math>
+  <region id="22" left="36" top="1116" width="136" height="95" color="#000000" bgColor="#ffffff" fontSize="12">
+    <math breaking="0">
       <input>
-        <e type="operand">test</e>
-        <e type="operand">XXXX</e>
-        <e type="operator" args="2">:</e>
+        <e type="operand">T.r</e>
       </input>
+      <result action="numeric">
+        <e type="operand">316.15</e>
+        <e type="operand">321.15</e>
+        <e type="operand">326.15</e>
+        <e type="operand">331.15</e>
+        <e type="operand">4</e>
+        <e type="operand">1</e>
+        <e type="function" args="6">mat</e>
+      </result>
     </math>
   </region>
-  <region id="23" left="18" top="1026" width="201" height="28" border="true" color="#000000" bgColor="#ff0000" fontSize="12">
+  <region id="23" left="216" top="1116" width="136" height="95" color="#000000" bgColor="#ffffff" fontSize="12">
+    <math>
+      <input>
+        <e type="operand">T.s</e>
+      </input>
+      <result action="numeric">
+        <e type="operand">288.15</e>
+        <e type="operand">283.15</e>
+        <e type="operand">278.15</e>
+        <e type="operand">273.15</e>
+        <e type="operand">4</e>
+        <e type="operand">1</e>
+        <e type="function" args="6">mat</e>
+      </result>
+    </math>
+  </region>
+  <region id="24" left="369" top="1125" width="136" height="73" color="#000000" bgColor="#ffffff" fontSize="12">
+    <math>
+      <input>
+        <e type="operand">T.b</e>
+      </input>
+      <result action="numeric">
+        <e type="operand">321.15</e>
+        <e type="operand">316.15</e>
+        <e type="operand">311.15</e>
+        <e type="operand">3</e>
+        <e type="operand">1</e>
+        <e type="function" args="5">mat</e>
+      </result>
+    </math>
+  </region>
+  <region id="25" left="522" top="1125" width="136" height="73" color="#000000" bgColor="#ffffff" fontSize="12">
+    <math>
+      <input>
+        <e type="operand">T.y</e>
+      </input>
+      <result action="numeric">
+        <e type="operand">295.15</e>
+        <e type="operand">297.15</e>
+        <e type="operand">299.15</e>
+        <e type="operand">3</e>
+        <e type="operand">1</e>
+        <e type="function" args="5">mat</e>
+      </result>
+    </math>
+  </region>
+  <region id="26" left="36" top="1233" width="129" height="138" color="#000000" bgColor="#ffffff" fontSize="12">
+    <math>
+      <input>
+        <e type="operand">T</e>
+      </input>
+      <result action="numeric">
+        <e type="operand">293.15</e>
+        <e type="operand">293.15</e>
+        <e type="operand">293.15</e>
+        <e type="operand">293.15</e>
+        <e type="operand">293.15</e>
+        <e type="operand">293.15</e>
+        <e type="operand">6</e>
+        <e type="operand">1</e>
+        <e type="function" args="8">mat</e>
+      </result>
+    </math>
+  </region>
+  <region id="27" left="18" top="1386" width="201" height="28" border="true" color="#000000" bgColor="#ff0000" fontSize="12">
     <text lang="eng">
       <p>Rock Bed Properties</p>
     </text>
   </region>
-  <region id="24" left="27" top="1071" width="138" height="27" color="#000000" bgColor="#ffffff" fontSize="12">
+  <region id="28" left="27" top="1431" width="138" height="27" color="#000000" bgColor="#ffffff" fontSize="12">
     <math>
       <input>
         <e type="operand">L_rockbed</e>
@@ -418,12 +496,12 @@
       </input>
     </math>
   </region>
-  <region id="25" left="216" top="1071" width="240" height="28" color="#000000" bgColor="#ffffff" fontSize="12">
+  <region id="29" left="216" top="1431" width="240" height="28" color="#000000" bgColor="#ffffff" fontSize="12">
     <text lang="eng">
       <p>Total Lenght of Rockbed</p>
     </text>
   </region>
-  <region id="26" left="27" top="1098" width="138" height="27" color="#000000" bgColor="#ffffff" fontSize="12">
+  <region id="30" left="27" top="1458" width="138" height="27" color="#000000" bgColor="#ffffff" fontSize="12">
     <math>
       <input>
         <e type="operand">W_rockbed</e>
@@ -432,12 +510,12 @@
       </input>
     </math>
   </region>
-  <region id="27" left="216" top="1098" width="171" height="28" color="#000000" bgColor="#ffffff" fontSize="12">
+  <region id="31" left="216" top="1458" width="171" height="28" color="#000000" bgColor="#ffffff" fontSize="12">
     <text lang="eng">
       <p>Width of Rockbed</p>
     </text>
   </region>
-  <region id="28" left="36" top="1134" width="148" height="27" color="#000000" bgColor="#ffffff" fontSize="12">
+  <region id="32" left="36" top="1494" width="148" height="27" color="#000000" bgColor="#ffffff" fontSize="12">
     <math>
       <input>
         <e type="operand">H_rockbed</e>
@@ -446,12 +524,12 @@
       </input>
     </math>
   </region>
-  <region id="29" left="216" top="1134" width="181" height="28" color="#000000" bgColor="#ffffff" fontSize="12">
+  <region id="33" left="216" top="1494" width="181" height="28" color="#000000" bgColor="#ffffff" fontSize="12">
     <text lang="eng">
       <p>Height of rockbed</p>
     </text>
   </region>
-  <region id="30" left="36" top="1161" width="233" height="56" color="#000000" bgColor="#ffffff" fontSize="12">
+  <region id="34" left="36" top="1521" width="233" height="56" color="#000000" bgColor="#ffffff" fontSize="12">
     <math optimize="2" breaking="4">
       <input>
         <e type="operand">dL_rockbed</e>
@@ -463,7 +541,7 @@
       </input>
     </math>
   </region>
-  <region id="31" left="36" top="1215" width="79" height="27" color="#000000" bgColor="#ffffff" fontSize="12">
+  <region id="35" left="36" top="1575" width="79" height="27" color="#000000" bgColor="#ffffff" fontSize="12">
     <math>
       <input>
         <e type="operand" style="unit">ε</e>
@@ -472,12 +550,12 @@
       </input>
     </math>
   </region>
-  <region id="32" left="180" top="1215" width="111" height="28" color="#000000" bgColor="#ffffff" fontSize="12">
+  <region id="36" left="180" top="1575" width="111" height="28" color="#000000" bgColor="#ffffff" fontSize="12">
     <text lang="eng">
       <p>void ratio</p>
     </text>
   </region>
-  <region id="33" left="36" top="1260" width="79" height="34" color="#000000" bgColor="#ffffff" fontSize="12">
+  <region id="37" left="36" top="1620" width="79" height="34" color="#000000" bgColor="#ffffff" fontSize="12">
     <math>
       <input>
         <e type="operand">d.p</e>
@@ -486,12 +564,12 @@
       </input>
     </math>
   </region>
-  <region id="34" left="180" top="1260" width="191" height="28" color="#000000" bgColor="#ffffff" fontSize="12">
+  <region id="38" left="180" top="1620" width="191" height="28" color="#000000" bgColor="#ffffff" fontSize="12">
     <text lang="eng">
       <p>diameter of stones</p>
     </text>
   </region>
-  <region id="35" left="36" top="1305" width="53" height="27" color="#000000" bgColor="#ffffff" fontSize="12">
+  <region id="39" left="36" top="1665" width="53" height="27" color="#000000" bgColor="#ffffff" fontSize="12">
     <math>
       <input>
         <e type="operand">ψ</e>
@@ -500,12 +578,12 @@
       </input>
     </math>
   </region>
-  <region id="36" left="171" top="1305" width="201" height="28" color="#000000" bgColor="#ffffff" fontSize="12">
+  <region id="40" left="171" top="1665" width="201" height="28" color="#000000" bgColor="#ffffff" fontSize="12">
     <text lang="eng">
       <p>spherisity of stone</p>
     </text>
   </region>
-  <region id="37" left="27" top="1350" width="88" height="34" color="#000000" bgColor="#ffffff" fontSize="12">
+  <region id="41" left="27" top="1710" width="88" height="34" color="#000000" bgColor="#ffffff" fontSize="12">
     <math>
       <input>
         <e type="operand">ρ.p</e>
@@ -514,12 +592,12 @@
       </input>
     </math>
   </region>
-  <region id="38" left="198" top="1368" width="181" height="28" color="#000000" bgColor="#ffffff" fontSize="12">
+  <region id="42" left="198" top="1728" width="181" height="28" color="#000000" bgColor="#ffffff" fontSize="12">
     <text lang="eng">
       <p>Density of stones</p>
     </text>
   </region>
-  <region id="39" left="27" top="1413" width="87" height="34" color="#000000" bgColor="#ffffff" fontSize="12">
+  <region id="43" left="27" top="1773" width="87" height="34" color="#000000" bgColor="#ffffff" fontSize="12">
     <math>
       <input>
         <e type="operand">c.pp</e>
@@ -528,12 +606,12 @@
       </input>
     </math>
   </region>
-  <region id="40" left="225" top="1431" width="240" height="28" color="#000000" bgColor="#ffffff" fontSize="12">
+  <region id="44" left="225" top="1791" width="240" height="28" color="#000000" bgColor="#ffffff" fontSize="12">
     <text lang="eng">
       <p>Heat capacity of stones</p>
     </text>
   </region>
-  <region id="41" left="27" top="1476" width="148" height="27" color="#000000" bgColor="#ffffff" fontSize="12">
+  <region id="45" left="27" top="1836" width="148" height="27" color="#000000" bgColor="#ffffff" fontSize="12">
     <math>
       <input>
         <e type="operand">η_rockbed</e>
@@ -542,12 +620,12 @@
       </input>
     </math>
   </region>
-  <region id="42" left="234" top="1476" width="210" height="28" color="#000000" bgColor="#ffffff" fontSize="12">
+  <region id="46" left="234" top="1836" width="210" height="28" color="#000000" bgColor="#ffffff" fontSize="12">
     <text lang="eng">
       <p>Pressure Loss Factor</p>
     </text>
   </region>
-  <region id="43" left="27" top="1512" width="236" height="34" color="#000000" bgColor="#ffffff" fontSize="12">
+  <region id="47" left="27" top="1872" width="236" height="34" color="#000000" bgColor="#ffffff" fontSize="12">
     <math optimize="2">
       <input>
         <e type="operand">A.b</e>
@@ -558,7 +636,7 @@
       </input>
     </math>
   </region>
-  <region id="44" left="27" top="1566" width="265" height="35" color="#000000" bgColor="#ffffff" fontSize="12">
+  <region id="48" left="27" top="1926" width="265" height="35" color="#000000" bgColor="#ffffff" fontSize="12">
     <math optimize="2">
       <input>
         <e type="operand">m.b</e>
@@ -576,26 +654,26 @@
       </input>
     </math>
   </region>
-  <region id="45" left="27" top="1611" width="79" height="34" color="#000000" bgColor="#ffffff" fontSize="12">
+  <region id="49" left="27" top="1971" width="60" height="34" color="#000000" bgColor="#ffffff" fontSize="12">
     <math>
       <input>
         <e type="operand">Q.r</e>
-        <e type="operand">2.6</e>
+        <e type="operand">5</e>
         <e type="operator" args="2">:</e>
       </input>
     </math>
   </region>
-  <region id="46" left="171" top="1638" width="170" height="28" color="#000000" bgColor="#ffffff" fontSize="12">
+  <region id="50" left="171" top="1998" width="170" height="28" color="#000000" bgColor="#ffffff" fontSize="12">
     <text lang="eng">
       <p>Volume flow rate</p>
     </text>
   </region>
-  <region id="47" left="36" top="1764" width="240" height="28" border="true" color="#000000" bgColor="#80ff00" fontSize="12">
+  <region id="51" left="36" top="2124" width="240" height="28" border="true" color="#000000" bgColor="#80ff00" fontSize="12">
     <text lang="eng">
       <p>Environmental Constants</p>
     </text>
   </region>
-  <region id="48" left="45" top="1800" width="124" height="34" color="#000000" bgColor="#ffffff" fontSize="12">
+  <region id="52" left="45" top="2160" width="124" height="34" color="#000000" bgColor="#ffffff" fontSize="12">
     <math>
       <input>
         <e type="operand">T.env</e>
@@ -604,7 +682,7 @@
       </input>
     </math>
   </region>
-  <region id="49" left="45" top="1836" width="95" height="34" color="#000000" bgColor="#ffffff" fontSize="12">
+  <region id="53" left="45" top="2196" width="95" height="34" color="#000000" bgColor="#ffffff" fontSize="12">
     <math>
       <input>
         <e type="operand">A.env</e>
@@ -613,7 +691,7 @@
       </input>
     </math>
   </region>
-  <region id="50" left="45" top="1890" width="95" height="34" color="#000000" bgColor="#ffffff" fontSize="12">
+  <region id="54" left="45" top="2250" width="95" height="34" color="#000000" bgColor="#ffffff" fontSize="12">
     <math>
       <input>
         <e type="operand">h.env</e>
@@ -622,12 +700,12 @@
       </input>
     </math>
   </region>
-  <region id="51" left="45" top="1962" width="211" height="28" border="true" color="#000000" bgColor="#80ff00" fontSize="12">
+  <region id="55" left="45" top="2322" width="211" height="28" border="true" color="#000000" bgColor="#80ff00" fontSize="12">
     <text lang="eng">
       <p>Incubator Properties</p>
     </text>
   </region>
-  <region id="52" left="63" top="2007" width="69" height="34" color="#000000" bgColor="#ffffff" fontSize="12">
+  <region id="56" left="63" top="2367" width="69" height="34" color="#000000" bgColor="#ffffff" fontSize="12">
     <math>
       <input>
         <e type="operand">N.T</e>
@@ -636,7 +714,7 @@
       </input>
     </math>
   </region>
-  <region id="53" left="207" top="2007" width="96" height="34" color="#000000" bgColor="#ffffff" fontSize="12">
+  <region id="57" left="207" top="2367" width="96" height="34" color="#000000" bgColor="#ffffff" fontSize="12">
     <math>
       <input>
         <e type="operand">c.py</e>
@@ -645,7 +723,7 @@
       </input>
     </math>
   </region>
-  <region id="54" left="405" top="2016" width="88" height="34" color="#000000" bgColor="#ffffff" fontSize="12">
+  <region id="58" left="405" top="2376" width="88" height="34" color="#000000" bgColor="#ffffff" fontSize="12">
     <math>
       <input>
         <e type="operand">ρ.y</e>
@@ -654,7 +732,7 @@
       </input>
     </math>
   </region>
-  <region id="55" left="63" top="2043" width="98" height="34" color="#000000" bgColor="#ffffff" fontSize="12">
+  <region id="59" left="63" top="2403" width="98" height="34" color="#000000" bgColor="#ffffff" fontSize="12">
     <math>
       <input>
         <e type="operand">S.T</e>
@@ -663,7 +741,7 @@
       </input>
     </math>
   </region>
-  <region id="56" left="63" top="2079" width="79" height="34" color="#000000" bgColor="#ffffff" fontSize="12">
+  <region id="60" left="63" top="2439" width="79" height="34" color="#000000" bgColor="#ffffff" fontSize="12">
     <math>
       <input>
         <e type="operand">H.y</e>
@@ -672,7 +750,7 @@
       </input>
     </math>
   </region>
-  <region id="57" left="198" top="2079" width="98" height="34" color="#000000" bgColor="#ffffff" fontSize="12">
+  <region id="61" left="198" top="2439" width="98" height="34" color="#000000" bgColor="#ffffff" fontSize="12">
     <math>
       <input>
         <e type="operand">D.y</e>
@@ -681,7 +759,7 @@
       </input>
     </math>
   </region>
-  <region id="58" left="396" top="2088" width="69" height="34" color="#000000" bgColor="#ffffff" fontSize="12">
+  <region id="62" left="396" top="2448" width="69" height="34" color="#000000" bgColor="#ffffff" fontSize="12">
     <math>
       <input>
         <e type="operand">N.L</e>
@@ -690,7 +768,7 @@
       </input>
     </math>
   </region>
-  <region id="59" left="72" top="2115" width="98" height="34" color="#000000" bgColor="#ffffff" fontSize="12">
+  <region id="63" left="72" top="2475" width="98" height="34" color="#000000" bgColor="#ffffff" fontSize="12">
     <math>
       <input>
         <e type="operand">S.L</e>
@@ -699,12 +777,12 @@
       </input>
     </math>
   </region>
-  <region id="60" left="18" top="2142" width="269" height="28" color="#000000" bgColor="#ffffff" fontSize="12">
+  <region id="64" left="18" top="2502" width="269" height="28" color="#000000" bgColor="#ffffff" fontSize="12">
     <text lang="eng">
       <p>Selected Volume Flow Rate:</p>
     </text>
   </region>
-  <region id="61" left="27" top="2187" width="73" height="61" color="#000000" bgColor="#ffffff" fontSize="12">
+  <region id="65" left="27" top="2547" width="73" height="61" color="#000000" bgColor="#ffffff" fontSize="12">
     <math optimize="2">
       <input>
         <e type="operand">μ.r</e>
@@ -715,7 +793,7 @@
       </input>
     </math>
   </region>
-  <region id="62" left="36" top="2259" width="124" height="34" color="#000000" bgColor="#ffffff" fontSize="12">
+  <region id="66" left="36" top="2619" width="124" height="34" color="#000000" bgColor="#ffffff" fontSize="12">
     <math>
       <input>
         <e type="operand">T.set</e>
@@ -724,7 +802,7 @@
       </input>
     </math>
   </region>
-  <region id="63" left="36" top="2295" width="62" height="27" color="#000000" bgColor="#ffffff" fontSize="12">
+  <region id="67" left="36" top="2655" width="62" height="27" color="#000000" bgColor="#ffffff" fontSize="12">
     <math>
       <input>
         <e type="operand">KI</e>
@@ -733,7 +811,7 @@
       </input>
     </math>
   </region>
-  <region id="64" left="36" top="2322" width="90" height="27" color="#000000" bgColor="#ffffff" fontSize="12">
+  <region id="68" left="36" top="2682" width="90" height="27" color="#000000" bgColor="#ffffff" fontSize="12">
     <math>
       <input>
         <e type="operand">KP</e>
@@ -742,7 +820,7 @@
       </input>
     </math>
   </region>
-  <region id="65" left="45" top="2367" width="69" height="34" color="#000000" bgColor="#ffffff" fontSize="12">
+  <region id="69" left="45" top="2727" width="69" height="34" color="#000000" bgColor="#ffffff" fontSize="12">
     <math>
       <input>
         <e type="operand">h.s</e>
@@ -751,18 +829,18 @@
       </input>
     </math>
   </region>
-  <region id="66" left="27" top="2412" width="160" height="24" color="#000000" bgColor="#c0c0c0" fontSize="10">
+  <region id="70" left="27" top="2772" width="160" height="24" color="#000000" bgColor="#c0c0c0" fontSize="10">
     <text lang="eng">
       <p>CYCLE TEMPERATURES</p>
     </text>
   </region>
-  <region id="67" left="630" top="2430" width="41" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+  <region id="71" left="630" top="2790" width="41" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
     <text lang="eng">
       <p>Fan </p>
     </text>
   </region>
-  <region id="68" left="27" top="2466" width="524" height="2022" color="#000000" bgColor="#ffffff" fontSize="10">
-    <math optimize="2">
+  <region id="72" left="27" top="2826" width="524" height="1902" color="#000000" bgColor="#ffffff" fontSize="10">
+    <math optimize="2" error="25">
       <input>
         <e type="operand">k</e>
         <e type="operand">1</e>
@@ -973,15 +1051,9 @@
         <e type="operator" args="2">*</e>
         <e type="operator" args="2">/</e>
         <e type="operator" args="2">:</e>
-        <e type="operand">j</e>
-        <e type="operand">T.j</e>
-        <e type="operand">T.r</e>
-        <e type="operand">j</e>
-        <e type="function" args="2">el</e>
-        <e type="function" args="3">trace</e>
-        <e type="operand">15</e>
+        <e type="operand">14</e>
         <e type="operand">1</e>
-        <e type="function" args="17">line</e>
+        <e type="function" args="16">line</e>
         <e type="function" args="3">for</e>
         <e type="operand">T</e>
         <e type="operand">3</e>
@@ -992,10 +1064,6 @@
         <e type="operator" args="2">+</e>
         <e type="function" args="2">el</e>
         <e type="operator" args="2">:</e>
-        <e type="operand">T</e>
-        <e type="operand">3</e>
-        <e type="function" args="2">el</e>
-        <e type="function" args="1">trace</e>
         <e type="operand">T.ha</e>
         <e type="operand">0.5</e>
         <e type="operand">T</e>
@@ -1043,10 +1111,6 @@
         <e type="operator" args="2">/</e>
         <e type="operator" args="2">+</e>
         <e type="operator" args="2">:</e>
-        <e type="operand">T</e>
-        <e type="operand">4</e>
-        <e type="function" args="2">el</e>
-        <e type="function" args="1">trace</e>
         <e type="operand">T.ea</e>
         <e type="operand">0.5</e>
         <e type="operand">T</e>
@@ -1108,10 +1172,6 @@
         <e type="operand">5</e>
         <e type="function" args="2">el</e>
         <e type="operator" args="2">:</e>
-        <e type="operand">T</e>
-        <e type="operand">5</e>
-        <e type="function" args="2">el</e>
-        <e type="function" args="1">trace</e>
         <e type="operand">j</e>
         <e type="operand">1</e>
         <e type="operand">n.s</e>
@@ -1183,11 +1243,24 @@
         <e type="operator" args="2">/</e>
         <e type="operator" args="2">:</e>
         <e type="operand">Nu.D</e>
-        <e type="operand">h.s</e>
-        <e type="operand">D.y</e>
+        <e type="operand">0.72</e>
+        <e type="operand">0.98</e>
         <e type="operator" args="2">*</e>
-        <e type="operand">k.s</e>
+        <e type="operand">Re.D</e>
+        <e type="operand">0.63</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">Pr.s</e>
+        <e type="operand">0.365</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
+        <e type="operand">Pr.s</e>
+        <e type="operand">Pr.se</e>
         <e type="operator" args="2">/</e>
+        <e type="bracket">(</e>
+        <e type="operand">0.25</e>
+        <e type="operator" args="2">^</e>
+        <e type="operator" args="2">*</e>
         <e type="operator" args="2">:</e>
         <e type="operand">m.y</e>
         <e type="operand">π</e>
@@ -1225,14 +1298,8 @@
         <e type="operand">N.T</e>
         <e type="operator" args="2">*</e>
         <e type="operator" args="2">:</e>
-        <e type="operand">T.y</e>
-        <e type="operand">j</e>
-        <e type="function" args="2">el</e>
-        <e type="operand">T.s</e>
-        <e type="operand">j</e>
-        <e type="function" args="2">el</e>
-        <e type="operand">A.y</e>
-        <e type="function" args="3">trace</e>
+        <e type="operand">Q.r</e>
+        <e type="function" args="1">trace</e>
         <e type="operand">T.s</e>
         <e type="operand">j</e>
         <e type="operand">1</e>
@@ -1302,44 +1369,44 @@
         <e type="function" args="2">el</e>
         <e type="operator" args="2">:</e>
         <e type="function" args="3">if</e>
-        <e type="operand">21</e>
+        <e type="operand">18</e>
         <e type="operand">1</e>
-        <e type="function" args="23">line</e>
+        <e type="function" args="20">line</e>
         <e type="function" args="3">for</e>
       </input>
     </math>
   </region>
-  <region id="69" left="621" top="2493" width="78" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+  <region id="73" left="621" top="2853" width="78" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
     <text lang="eng">
       <p>Rock bed</p>
     </text>
   </region>
-  <region id="70" left="657" top="2808" width="65" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+  <region id="74" left="657" top="3168" width="65" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
     <text lang="eng">
       <p>Heater </p>
     </text>
   </region>
-  <region id="71" left="630" top="2880" width="107" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+  <region id="75" left="630" top="3240" width="107" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
     <text lang="eng">
       <p>Environment </p>
     </text>
   </region>
-  <region id="72" left="612" top="2952" width="127" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+  <region id="76" left="612" top="3312" width="127" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
     <text lang="eng">
       <p>Yoghurt stacks</p>
     </text>
   </region>
-  <region id="73" left="36" top="4572" width="54" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+  <region id="77" left="36" top="4923" width="54" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
     <math>
       <input>
         <e type="operand">k</e>
       </input>
       <result action="numeric">
-        <e type="operand">1</e>
+        <e type="operand">2</e>
       </result>
     </math>
   </region>
-  <region id="74" left="27" top="4608" width="110" height="61" color="#000000" bgColor="#ffffff" fontSize="10">
+  <region id="78" left="27" top="4959" width="110" height="61" color="#000000" bgColor="#ffffff" fontSize="10">
     <math>
       <input>
         <e type="operand">T</e>
@@ -1357,6 +1424,56 @@
       </input>
       <result action="numeric">
         <e type="operand">0</e>
+      </result>
+    </math>
+  </region>
+  <region id="79" left="54" top="5049" width="63" height="27" color="#000000" bgColor="#ffffff" fontSize="12">
+    <math>
+      <input>
+        <e type="operand">T</e>
+      </input>
+      <result action="numeric">
+        <e type="operand">#</e>
+      </result>
+    </math>
+  </region>
+  <region id="80" left="54" top="5085" width="70" height="34" color="#000000" bgColor="#ffffff" fontSize="12">
+    <math>
+      <input>
+        <e type="operand">T.b</e>
+      </input>
+      <result action="numeric">
+        <e type="operand">#</e>
+      </result>
+    </math>
+  </region>
+  <region id="81" left="54" top="5139" width="70" height="34" color="#000000" bgColor="#ffffff" fontSize="12">
+    <math>
+      <input>
+        <e type="operand">T.s</e>
+      </input>
+      <result action="numeric">
+        <e type="operand">#</e>
+      </result>
+    </math>
+  </region>
+  <region id="82" left="54" top="5184" width="70" height="34" color="#000000" bgColor="#ffffff" fontSize="12">
+    <math>
+      <input>
+        <e type="operand">T.r</e>
+      </input>
+      <result action="numeric">
+        <e type="operand">#</e>
+      </result>
+    </math>
+  </region>
+  <region id="83" left="54" top="5256" width="70" height="34" color="#000000" bgColor="#ffffff" fontSize="12">
+    <math>
+      <input>
+        <e type="operand">T.y</e>
+      </input>
+      <result action="numeric">
+        <e type="operand">#</e>
       </result>
     </math>
   </region>
