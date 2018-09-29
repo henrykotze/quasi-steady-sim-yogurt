@@ -4,7 +4,7 @@
   <settings dpi="96">
     <identity>
       <id>261e2625-d940-459b-ba4e-dd271d5cb5ea</id>
-      <revision>175</revision>
+      <revision>186</revision>
     </identity>
     <calculation>
       <precision>4</precision>
@@ -930,7 +930,16 @@
       </input>
     </math>
   </region>
-  <region id="72" left="216" top="3762" width="58" height="34" color="#000000" bgColor="#ffffff" fontSize="12">
+  <region id="72" left="378" top="3735" width="185" height="27" color="#000000" bgColor="#ffffff" fontSize="12">
+    <math>
+      <input>
+        <e type="operand">pressure_system</e>
+        <e type="operand">0</e>
+        <e type="operator" args="2">:</e>
+      </input>
+    </math>
+  </region>
+  <region id="73" left="216" top="3762" width="58" height="34" color="#000000" bgColor="#ffffff" fontSize="12">
     <math>
       <input>
         <e type="operand">P.y</e>
@@ -939,7 +948,7 @@
       </input>
     </math>
   </region>
-  <region id="73" left="216" top="3861" width="175" height="27" color="#000000" bgColor="#ffffff" fontSize="12">
+  <region id="74" left="216" top="3861" width="175" height="27" color="#000000" bgColor="#ffffff" fontSize="12">
     <math>
       <input>
         <e type="operand">num_iteration</e>
@@ -948,7 +957,7 @@
       </input>
     </math>
   </region>
-  <region id="74" left="216" top="3915" width="106" height="34" color="#000000" bgColor="#ffffff" fontSize="12">
+  <region id="75" left="216" top="3915" width="106" height="34" color="#000000" bgColor="#ffffff" fontSize="12">
     <math>
       <input>
         <e type="operand">Q.r</e>
@@ -957,7 +966,7 @@
       </input>
     </math>
   </region>
-  <region id="75" left="216" top="3951" width="127" height="27" color="#000000" bgColor="#ffffff" fontSize="12">
+  <region id="76" left="216" top="3951" width="127" height="27" color="#000000" bgColor="#ffffff" fontSize="12">
     <math>
       <input>
         <e type="operand">rpm_set</e>
@@ -966,7 +975,7 @@
       </input>
     </math>
   </region>
-  <region id="76" left="216" top="3987" width="77" height="54" color="#000000" bgColor="#ffffff" fontSize="12">
+  <region id="77" left="216" top="3987" width="77" height="54" color="#000000" bgColor="#ffffff" fontSize="12">
     <math>
       <input>
         <e type="operand">Q.r_</e>
@@ -977,7 +986,7 @@
       </input>
     </math>
   </region>
-  <region id="77" left="216" top="4050" width="195" height="47" color="#000000" bgColor="#ffffff" fontSize="12">
+  <region id="78" left="216" top="4050" width="195" height="47" color="#000000" bgColor="#ffffff" fontSize="12">
     <math>
       <input>
         <e type="operand">Q_star</e>
@@ -990,7 +999,7 @@
       </input>
     </math>
   </region>
-  <region id="78" left="216" top="4104" width="92" height="34" color="#000000" bgColor="#ffffff" fontSize="12">
+  <region id="79" left="216" top="4104" width="92" height="34" color="#000000" bgColor="#ffffff" fontSize="12">
     <math>
       <input>
         <e type="operand">A.b</e>
@@ -1001,7 +1010,7 @@
       </input>
     </math>
   </region>
-  <region id="79" left="72" top="4149" width="522" height="39" color="#000000" bgColor="#ffffff" fontSize="12">
+  <region id="80" left="72" top="4149" width="522" height="39" color="#000000" bgColor="#ffffff" fontSize="12">
     <math optimize="2">
       <input>
         <e type="operand">pressure_pump</e>
@@ -1021,7 +1030,7 @@
       </input>
     </math>
   </region>
-  <region id="80" left="135" top="4230" width="520" height="1973" color="#000000" bgColor="#ffffff" fontSize="10">
+  <region id="81" left="135" top="4230" width="520" height="1885" color="#000000" bgColor="#ffffff" fontSize="10">
     <math optimize="2" error="25">
       <input>
         <e type="operand">k</e>
@@ -1520,32 +1529,11 @@
         <e type="operand">ε.s</e>
         <e type="operator" args="2">*</e>
         <e type="operator" args="2">:</e>
-        <e type="operand">T</e>
-        <e type="operand">1</e>
-        <e type="function" args="2">el</e>
-        <e type="operand">T</e>
-        <e type="operand">6</e>
-        <e type="function" args="2">el</e>
-        <e type="operator" args="2">-</e>
-        <e type="operand">T</e>
-        <e type="operand">6</e>
-        <e type="function" args="2">el</e>
-        <e type="operator" args="2">/</e>
-        <e type="function" args="1">abs</e>
-        <e type="operand">10</e>
-        <e type="operand">8</e>
-        <e type="operator" args="1">-</e>
-        <e type="operator" args="2">^</e>
-        <e type="operator" args="2">≤</e>
-        <e type="operand">break</e>
-        <e type="operand">T</e>
-        <e type="operand">1</e>
-        <e type="function" args="2">el</e>
-        <e type="operand">T</e>
-        <e type="operand">6</e>
-        <e type="function" args="2">el</e>
+        <e type="operand">pressure_system</e>
+        <e type="operand">P.y</e>
+        <e type="operand">P.d</e>
+        <e type="operator" args="2">+</e>
         <e type="operator" args="2">:</e>
-        <e type="function" args="3">if</e>
         <e type="operand">21</e>
         <e type="operand">1</e>
         <e type="function" args="23">line</e>
@@ -1553,7 +1541,7 @@
       </input>
     </math>
   </region>
-  <region id="81" left="171" top="6246" width="62" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+  <region id="82" left="72" top="6327" width="62" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
     <math>
       <input>
         <e type="operand">k</e>
@@ -1563,7 +1551,7 @@
       </result>
     </math>
   </region>
-  <region id="82" left="162" top="6282" width="110" height="61" color="#000000" bgColor="#ffffff" fontSize="10">
+  <region id="83" left="63" top="6363" width="110" height="61" color="#000000" bgColor="#ffffff" fontSize="10">
     <math>
       <input>
         <e type="operand">T</e>
@@ -1584,7 +1572,7 @@
       </result>
     </math>
   </region>
-  <region id="83" left="63" top="6444" width="520" height="42" color="#000000" bgColor="#ffffff" fontSize="12">
+  <region id="84" left="63" top="6444" width="520" height="42" color="#000000" bgColor="#ffffff" fontSize="12">
     <math>
       <input>
         <e type="operand">T</e>
@@ -1603,7 +1591,7 @@
       </result>
     </math>
   </region>
-  <region id="84" left="72" top="6525" width="362" height="48" color="#000000" bgColor="#ffffff" fontSize="12">
+  <region id="85" left="72" top="6525" width="362" height="48" color="#000000" bgColor="#ffffff" fontSize="12">
     <math>
       <input>
         <e type="operand">dT.r</e>
@@ -1636,7 +1624,7 @@
       </result>
     </math>
   </region>
-  <region id="85" left="81" top="6615" width="291" height="48" color="#000000" bgColor="#ffffff" fontSize="12">
+  <region id="86" left="81" top="6615" width="291" height="48" color="#000000" bgColor="#ffffff" fontSize="12">
     <math>
       <input>
         <e type="operand">dT.y</e>
@@ -1656,24 +1644,24 @@
       </result>
     </math>
   </region>
-  <region id="86" left="90" top="6705" width="288" height="27" color="#000000" bgColor="#ffffff" fontSize="12">
+  <region id="87" left="72" top="6678" width="273" height="27" color="#000000" bgColor="#ffffff" fontSize="12">
     <math>
       <input>
         <e type="operand">pressure_system</e>
       </input>
       <result action="numeric">
-        <e type="operand">1152.4046</e>
-        <e type="operator" args="1">-</e>
+        <e type="operand">1152.4084</e>
       </result>
     </math>
   </region>
-  <region id="87" left="99" top="6741" width="254" height="27" color="#000000" bgColor="#ffffff" fontSize="12">
+  <region id="88" left="81" top="6723" width="269" height="27" color="#000000" bgColor="#ffffff" fontSize="12">
     <math>
       <input>
         <e type="operand">pressure_pump</e>
       </input>
       <result action="numeric">
-        <e type="operand">1152.4084</e>
+        <e type="operand">1152.4046</e>
+        <e type="operator" args="1">-</e>
       </result>
     </math>
   </region>

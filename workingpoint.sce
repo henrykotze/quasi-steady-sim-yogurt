@@ -24,8 +24,14 @@ Ts = [T_y0 T_y0-5 T_y0-7 T_y0-10];
 //Yogurt stacks averages temperatures
 Ty = [293.15+10 293.15+12 293.15+15];
 
+// Change in Yogurt stacks temperatures
+dTy = [ 0 0 0 ]; 
+
 // rockbed average temperature
 Tb = [326.15 326.15-5 326.15-10];
+
+// Change in rockbed temperatures
+dTb = [ 0 0 0 ]; 
 
 // Pressure drop across Rockbed
 Pd = 0;
@@ -34,7 +40,7 @@ Pd = 0;
 Py = 0;
 
 // number of iteration
-num_iteration = 50
+num_iteration = 10
 
 // Volume flow rate;
 Qr = 3.1734; // 2.647
@@ -45,7 +51,7 @@ Ab = W_b*H_b;
 
 pressure_pump = -13.649*Q_star^2+73.946*Q_star+1055.2
 pressure_drop = 0;
-for k=1:num_iteration
+for k=1:50
     // FAN
     T(2) = T(1);                // no temperature change accross fan
     Tr(1) = T(2);               // 
@@ -64,8 +70,9 @@ for k=1:num_iteration
         h_avg = (k_avg*Nu_avg)/(d_p^2);                     // Convection coefficient 
         Tr(j+1) = Tb(j) - ( Tb(j)-Tr(j) )*exp( (-h_avg*( L_b/n_b ) )/( cp_avg*G_avg ) );
         
+        // change in temperature in rockbed
+        dTb(j) = (cp_avg*G_avg*(Tr(j)-Tr(j+1)))/(2640*820*(1-Tr(j+1))*(L_b/n_b))
         // Pressure drop across control volume
-        
         Pd = -f_avg*G_avg^2*(L_b/n_b)/(rho_avg*d_p) + Pd;
         disp(Pd)
 
@@ -114,6 +121,8 @@ for k=1:num_iteration
         
         Ts(i+1) = Ty(i) - (Ty(i) - Ts(i))*exp( -1*(A_y*h_avg)/(rho_avg*Qr*cp_avg) );
         
+        // change in yogurt stack temperatures
+        dTy(i) = (rho_avg*Qr)/(3520*m_y)*(Ts(i)-Ts(i+1))
         // Pressure drop 
         // Fix friction factor
         Py = Py + -N_Ls*0.3*(rho_avg*mu_s^2)/2;
@@ -128,6 +137,11 @@ for k=1:num_iteration
     
     pressure_drop = Py+Pd; 
 end
+
+
+
+disp('k')
+disp(k);
 disp('T')
 disp(T);
 disp('Pressure pump')
@@ -136,3 +150,8 @@ disp('pressure drop')
 disp(pressure_drop)
 disp('Pressure pump - pressure drop')
 disp(pressure_pump + pressure_drop)
+
+disp('change in rockbed temperature')
+disp(dTb)
+disp('change in yogurt temperature')
+disp(dTy)
